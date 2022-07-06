@@ -24,12 +24,15 @@ module.exports = async function (context, req) {
 
 
 
+
+    const gif = await findGifs(main_emotion);
+
+   // context.log(gif);
     context.res = {
-        body: {
-            main_emotion
-        }
+        body: gif
     };
-    console.log(result)
+    //console.log()
+    console.log(gif)
     //context.done(); 
 }
 
@@ -63,3 +66,32 @@ async function analyzeImage(img){
 }
 // key: 8ff4dba4295d47bfb08ce26e5f574238
 // endpoint: https://jackysnakesfaceapi.cognitiveservices.azure.com/
+
+
+async function findGifs(emotion){
+/*
+    const apiKey = "?api_key="+"0PYIEbp7nwShjYsE26eZJI86lO0YHFAa"
+    const s = "?s="+emotion
+    //COMPLETE THE CODE
+
+    const apiResult = await fetch ("https://api.giphy.com/v1/gifs/translate"+apiKey+s);
+
+    const jsonResult = await apiResult.json();
+
+    return jsonResult.URLSearchParams;
+*/
+    const uriBase = "https://api.giphy.com/v1/gifs/translate"
+    let params = new URLSearchParams({
+        'api_key': '0PYIEbp7nwShjYsE26eZJI86lO0YHFAa',
+        's': emotion,
+        'limit': '1'
+    })
+    
+    //COMPLETE THE CODE
+    let resp = await fetch(uriBase + '?' + 
+    params.toString())
+    let jsonGifs = await resp.json();
+
+    return jsonGifs.data.url;
+    
+}
