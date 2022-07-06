@@ -25,10 +25,10 @@ module.exports = async function (context, req) {
 }
 
 async function analyzeImage(img){
-    const subscriptionKey = process.env.SUBSCRIPTIONKEY;
-    const uriBase = process.env.ENDPOINT + '/face/v1.0/detect';
-    //const subscriptionKey = "2b46dc89f4624d6ba01b0b629dd94ad0"
-    //const uriBase = "https://placeholdeer-face-api.cognitiveservices.azure.com/"+ '/face/v1.0/detect'
+    //const subscriptionKey = process.env.SUBSCRIPTIONKEY;
+    //const uriBase = process.env.ENDPOINT + '/face/v1.0/detect';
+    const subscriptionKey = "2b46dc89f4624d6ba01b0b629dd94ad0"
+    const uriBase = "https://placeholdeer-face-api.cognitiveservices.azure.com/"+ '/face/v1.0/detect'
 
     let params = new URLSearchParams({
         'returnFaceId': 'true',
