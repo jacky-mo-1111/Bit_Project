@@ -81,9 +81,8 @@ async function findGifs(emotion){
     return jsonResult.URLSearchParams;
 */
     const uriBase = "https://api.giphy.com/v1/gifs/translate"
-    const apiKey = process.env.GIPHY_KEY;
     let params = new URLSearchParams({
-        'api_key': apiKey,
+        'api_key': '0PYIEbp7nwShjYsE26eZJI86lO0YHFAa',
         's': emotion,
         'limit': '1'
     })
