@@ -17,7 +17,9 @@ module.exports = async function (context, req) {
     // we are receiving it as a Buffer since this is binary data
 
     const result = await analyzeImage(data);
-    //context.log(result);
+    context.log(result);
+
+    
     let age = result[0].faceAttributes.age;
     //context.log(age);
     
