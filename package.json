@@ -9,7 +9,7 @@
   "dependencies": {
     "cypress": "^8.2.0",
     "morse-code-converter": "^1.0.2",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "qs": "^6.11.0"
   },
   "main": "index.js",
@@ -23,5 +23,6 @@
   "bugs": {
     "url": "https://github.com/jacky-mo-1111/Bit_Project/issues"
   },
-  "homepage": "https://github.com/jacky-mo-1111/Bit_Project#readme"
+  "homepage": "https://github.com/jacky-mo-1111/Bit_Project#readme",
+  "devDependencies": {}
 }
