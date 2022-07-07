@@ -1,4 +1,5 @@
 const querystring = require('qs');
+const fetch = require ("node-fetch")
 
 module.exports = async function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
@@ -8,9 +9,6 @@ module.exports = async function (context, req) {
     //context.log(url);
 
     let resp = await fetch(url,{
-        /*The await expression causes async function execution to pause until a Promise is settled 
-        (that is, fulfilled or rejected), and to resume execution of the async function after fulfillment. 
-        When resumed, the value of the await expression is that of the fulfilled Promise*/
         method: 'GET',
     })
 
