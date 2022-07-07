@@ -23,5 +23,6 @@
   "bugs": {
     "url": "https://github.com/jacky-mo-1111/Bit_Project/issues"
   },
-  "homepage": "https://github.com/jacky-mo-1111/Bit_Project#readme"
+  "homepage": "https://github.com/jacky-mo-1111/Bit_Project#readme",
+  "devDependencies": {}
 }

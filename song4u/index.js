@@ -5,21 +5,21 @@ module.exports = async function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
 
     const queryObject = querystring.parse(req.body);
-    const url = queryObject.MediaUrl0;
-    context.log(url);
+    const url = queryObject.MediaUrl0; 
+    //context.log(url);
 
     let resp = await fetch(url,{
         method: 'GET',
-    })
+    }) 
 
     // receive the response
-    let data = await resp.arrayBuffer()
+    const data = await resp.arrayBuffer()
     // we are receiving it as a Buffer since this is binary data
 
     const result = await analyzeImage(data);
-    context.log(result);
+    //context.log(result);
     let age = result[0].faceAttributes.age;
-    context.log(age);
+    //context.log(age);
     
 
 
@@ -64,8 +64,7 @@ async function analyzeImage(img){
             //ADD YOUR TWO HEADERS HERE
         headers: {
             'Content-Type' : 'application/octet-stream',
-
-            'Ocp-Apim-Subscription-Key': subscriptionKey
+            'Ocp-Apim-Subscription-Key': subscriptionKey,
         }
     })
 
