@@ -1,5 +1,5 @@
 const querystring = require('qs');
-const fetch = require ("node-fetch")
+const fetch = require ("node-fetch");
 
 module.exports = async function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
