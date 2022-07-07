@@ -25,13 +25,13 @@ module.exports = async function (context, req) {
         id = "GenZ"
     }
     else if (age > 24 && age < 41) {
-        id = "GenY"
+        id = "GenY" 
     }
     else if (age > 40 && age < 57) {
         id = "GenX"
     }
     else if (age > 56 && age < 76) {
-        id = "BabyBoomers"
+        id = "BabyBoomers" 
     }
     else{
         id = "Unknown"
